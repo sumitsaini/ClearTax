@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditorActivity">
+
+
+    <TextView
+        android:id="@+id/tv_words_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/large_padding"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_l"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_editor"
+        tools:text="2 words" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_editor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/large_padding"
+        app:contentPadding="@dimen/medium_padding"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_editor"
+            android:gravity="top"
+            android:padding="4dp"
+            android:background="@drawable/edit_box_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_m"
+        android:enabled="false"
+        android:layout_margin="@dimen/large_padding"
+        app:layout_constraintTop_toBottomOf="@+id/tv_words_count"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Undo"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
